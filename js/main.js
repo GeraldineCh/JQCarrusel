@@ -3,7 +3,6 @@ $(document).ready(function () {
 		var index = 0;
 		showImage(index);
 
-		/** cambio de imágenes por control antes **/
 		$(".prev").click(function () {
 				hideImage(index);
 				index--;
@@ -11,17 +10,14 @@ $(document).ready(function () {
 				showImage(index);
 		});
 
-		/** cambio de imágenes por control siguiente **/
 		$(".next").click(nextImage);
 
-		/** cambia de imágenes por input radio **/
 		$("input[type='radio']").click(function () {
 				hideImage(index);
 				index = $(this).val();
 				showImage(index);
 		});
 
-		/** cambia de imàgen cada 5 segundos **/
 		setInterval(nextImage, 5000);
 
 		function nextImage() {
